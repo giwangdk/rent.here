@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin/pages.index');
 });
+
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->group(function () {
+        Route::resource('category', 'CategoryController');
+    });
 
 Auth::routes();
 

@@ -59,6 +59,7 @@
         });
     });
 </script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js"></script>
 
 <!-- IE Support -->
 <script>

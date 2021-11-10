@@ -11,3 +11,6 @@
 
     <!-- CSS Front Template -->
     <link rel="stylesheet" href="{{ asset('dashboard/assets/css/theme.min.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.css"/>
+ 
