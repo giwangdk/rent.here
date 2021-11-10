@@ -60,7 +60,7 @@
     });
 </script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js"></script>
-
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 <!-- IE Support -->
 <script>
     if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');

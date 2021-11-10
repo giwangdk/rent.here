@@ -38,14 +38,14 @@
 
                     <!-- Pages -->
                     <li class="navbar-vertical-aside-has-menu ">
-                        <a class="js-nav-tooltip-link nav-link" href="#" title="Pages">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route('user.index')}}" title="Pages">
                             <i class="tio-pages-outlined nav-icon"></i>
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Users</span>
                         </a>
                     </li>
 
                     <li class="navbar-vertical-aside-has-menu ">
-                        <a class="js-nav-tooltip-link nav-link" href="#" title="Pages">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route("category.index")}}" title="Pages">
                             <i class="tio-pages-outlined nav-icon"></i>
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Categories</span>
                         </a>
