@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('landing.pages.index');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::prefix('admin')

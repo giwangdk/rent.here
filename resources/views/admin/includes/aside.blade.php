@@ -24,7 +24,7 @@
                 <ul class="navbar-nav navbar-nav-lg nav-tabs">
                     <!-- Dashboards -->
                     <li class="navbar-vertical-aside-has-menu show">
-                        <a class="nav-link " href="javascript:;" title="Dashboards">
+                        <a class="nav-link " href="{{url('/admin')}}" title="Dashboards">
                             <i class="tio-home-vs-1-outlined nav-icon"></i>
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboards</span>
                         </a>
@@ -48,6 +48,18 @@
                         <a class="js-nav-tooltip-link nav-link" href="{{route("category.index")}}" title="Pages">
                             <i class="tio-pages-outlined nav-icon"></i>
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Categories</span>
+                        </a>
+                    </li>
+                    <li class="navbar-vertical-aside-has-menu ">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route("car.index")}}" title="Pages">
+                            <i class="tio-pages-outlined nav-icon"></i>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Cars</span>
+                        </a>
+                    </li>
+                    <li class="navbar-vertical-aside-has-menu ">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route("gallery.index")}}" title="Pages">
+                            <i class="tio-pages-outlined nav-icon"></i>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Galleries</span>
                         </a>
                     </li>
 
