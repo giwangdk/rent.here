@@ -1,0 +1,12 @@
+@import '../vendor//bootstrap/scss/bootstrap.scss';
+
+@import './global';
+@import './variables';
+@import './navbar';
+@import './footer';
+
+@import './pages/home';
+@import './pages/login';
+@import './pages/register';
+@import './pages/about';
+@import './pages/layanan';

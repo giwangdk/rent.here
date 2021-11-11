@@ -1,0 +1,41 @@
+@import './../variables';
+
+.layanan-page{
+    .hero-layanan{
+        height: 60vh;
+        background-color: $whitBlue;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 45px;
+            font-weight: 600;
+        }
+    }
+
+    .list-cars{
+        .card-group{
+            .card{
+                border: none;
+                background-color: $lightBlue;
+                border-radius: 15px;
+                margin-top: 20px;
+                .card-top{
+                    padding:20px 20px 5px 20px;
+                    img{
+                        width: 100%;
+                        border-radius: 15px;
+                    }
+                }
+
+                .card-body{
+                    padding: 10px 20px;
+                    h5{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

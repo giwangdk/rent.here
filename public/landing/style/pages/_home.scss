@@ -1,0 +1,140 @@
+@import './../variables';
+
+main{
+    .badge-rental{
+            background-color: $lightBlue;
+            color:white;
+            padding:5px 8px;
+            border-radius:10px;
+        }
+    .hero{
+        background-color: $whitBlue;
+        padding:110px 0px 50px 0px;
+    .left-section{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items:flex-start;
+        h1{
+            color: $darkBlue;
+            font-size:58px;
+            font-weight: 700;
+        }
+        p{
+            color: $darkBlue;
+            margin-top: 20px;
+        }
+        .btn-start{
+            background-color: $medBlue;
+            color:white;
+        }
+    }
+
+    .right-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items:center;
+        
+        img{
+            width: 100%;
+            background-position: top;
+    }
+    }
+    
+    }
+
+    .how-it-works{
+        margin:80px 0; 
+
+        
+        h2{
+            color:$darkBlue;
+            font-weight:600;
+        }
+        
+        .card{
+            background-color:$light;
+            border:0px;
+            border-radius:15px;
+            color:$darkBlue;
+            text-align: center;
+
+            i{
+                background-color:$lightBlue;
+                padding:20px;
+                margin:25px 0 8px 0;
+                border-radius:10px;
+                color:$darkBlue;
+            }
+        }
+    }
+
+    .why-us{
+        padding:50px 0 20px 0;
+        background-color: $whitBlue;
+
+        .left-section{
+            img{
+                width:100%;
+            }
+        }
+            .right-section{
+                color:$darkBlue;
+                ul{
+                        margin-left:20px;
+                }
+            }
+            }
+
+    .category{
+        margin: 80px 0 30px 0;
+        cursor: pointer;
+        text-decoration: none;
+        .card{
+            background-color: white;
+            border: 2px solid $lightBlue; 
+            margin-bottom:20px;
+            border-radius: 15px;
+
+            .card-top{
+                padding-top: 30px;
+
+                img{
+                    border-radius:15px;
+                    padding:0px;
+                }
+            }
+            .card-body{
+                color:$darkBlue;
+                text-decoration: none;
+                padding:30px;
+            }
+
+            &:hover{
+                background-color: $darkBlue;
+                border: none;
+                transition: 0.3s ease-in;
+                .card-body{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .cta{
+        padding:80px 0 30px 0;
+        h2{
+            font-size: 40px;
+            color: $darkBlue;
+            font-weight: 500;
+        }
+        .btn-contact{
+            background-color: $medBlue;
+            border:none;
+            color:white;
+            margin-top: 20px;
+        }
+    }
+    }

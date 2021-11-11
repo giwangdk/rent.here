@@ -15,15 +15,19 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('admin/pages.index');
+    return view('landing.pages.index');
 });
 
 
 Route::prefix('admin')
     ->namespace('Admin')
     ->group(function () {
+
+        Route::resource('/', 'DashboardController');
         Route::resource('category', 'CategoryController');
         Route::resource('user', 'UserController');
+        Route::resource('car', 'CarController');
+        Route::resource('gallery', 'GalleryController');
     });
 
 Auth::routes();

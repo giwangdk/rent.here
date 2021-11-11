@@ -28,6 +28,7 @@ User
                     <div class="card">
                         <div class="card-body">
                             <form action="{{ route('user.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+                                @method('PUT')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">

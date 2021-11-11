@@ -1,0 +1,27 @@
+@import './../variables';
+
+.about-page{
+    margin-top: 100px;
+
+    .about-section{
+        .right-section{
+            .card{
+                border: none;
+                background-color: $whitBlue;
+                padding:30px;
+                line-height: 24px;
+                h2{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .contact-section{
+        margin-top: 40px;
+        h2{
+            text-align:center;
+            font-weight: 600;
+            margin-bottom:20px;
+        }
+    }
+}

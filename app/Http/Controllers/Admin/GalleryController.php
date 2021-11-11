@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Car;
+use App\Gallery;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\Admin\carRequest;
-use App\Category;
+use App\Http\Requests\Admin\GalleryRequest;
+use App\Car;
 
-class carController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class carController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Car::with(['category']);
+            $query = Gallery::with(['Car']);
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
@@ -31,10 +31,7 @@ class carController extends Controller
                                 Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="' . route('car.edit', $item->id) . '">
-                                    Sunting
-                                    </a>
-                                    <form action="' . route('car.destroy', $item->id) . '" method="post">
+                                    <form action="' . route('gallery.destroy', $item->id) . '" method="post">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                         Hapus
@@ -45,13 +42,13 @@ class carController extends Controller
                     </div>
                 ';
                 })
-                ->editColumn('photo', function ($item) {
-                    return $item->photo ? '<img src="' . Storage::url($item->photo) . '" style="max-height:30px" />'  : '';
+                ->editColumn('photos', function ($item) {
+                    return $item->photos ? '<img src="' . Storage::url($item->photos) . '" style="max-height:30px" />'  : '';
                 })
-                ->rawColumns(['action', 'photo'])
+                ->rawColumns(['action', 'photos'])
                 ->make();
         }
-        return view('admin.pages.car.index');
+        return view('admin.pages.gallery.index');
     }
 
     /**
@@ -61,8 +58,8 @@ class carController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.pages.car.create', compact('categories'));
+        $cars = Car::all();
+        return view('admin.pages.gallery.create', compact('cars'));
     }
 
     /**
@@ -71,13 +68,13 @@ class carController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(carRequest $request)
+    public function store(GalleryRequest $request)
     {
-        $data = $request->all();
-        $data['photo'] = $request->file('photo')->store('assets/car', 'public');
-        Car::create($data);
+        $data['photos'] = $request->file('photos')->store('assets/gallery', 'public');
+        $data['car_id'] = $request->car_id;
+        Gallery::create($data);
 
-        return redirect()->route('car.index');
+        return redirect()->route('gallery.index');
     }
 
     /**
@@ -86,44 +83,6 @@ class carController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $item = Car::findOrFail($id);
-        $categories = Category::all();
-
-        return view('admin.pages.car.edit', compact('item', 'categories'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(carRequest $request, $id)
-    {
-        $data = $request->all();
-
-        $data['photo'] = $request->file('photo')->store('assets/car', 'public');
-
-        $item = Car::findOrFail($id);
-
-        $item->update($data);
-
-        return redirect()->route('car.index');
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -133,9 +92,9 @@ class carController extends Controller
      */
     public function destroy($id)
     {
-        $item = Car::findOrFail($id);
+        $item = Gallery::findOrFail($id);
         $item->delete();
 
-        return redirect()->route('car.index');
+        return redirect()->route('gallery.index');
     }
 }
