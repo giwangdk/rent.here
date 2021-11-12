@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "hs-transform-tabs-to-btn.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "hs-transform-tabs-to-btn.css"
+}

@@ -6,8 +6,7 @@
 
 
                 <a class="navbar-brand" href="./index.html" aria-label="Front">
-                    <img class="navbar-brand-logo" src="{{asset('dashboard/assets/svg/logos/logo.svg')}}" alt="Logo">
-                    <img class="navbar-brand-logo-mini" src="{{asset('dashboard/assets/svg/logos/logo-short.svg')}}" alt="Logo">
+                     <img class="navbar-brand-logo w-100" src="{{asset('dashboard/assets/img/logo rent here (1).png')}}" alt="Logo">
                 </a>
 
                 <!-- End Logo -->

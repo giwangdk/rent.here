@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,aAAa,CAAC;EACb,QAAQ,EAAE,gBAAgB;EAC1B,OAAO,ECLE,IAAI;EDMb,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,gBAAgB;EACxB,UAAU,EAAE,gBAAgB;EAC5B,KAAK,EAAE,gBAAgB;EACvB,SAAS,EAAE,gBAAgB;EAC3B,aAAa,EAAE,CAAC;EAChB,MAAM,EAAE,CAAC;CACT;;AAED,AAAA,gBAAgB,CAAC;EAChB,QAAQ,EAAE,MAAM;CAChB",
+    "sources": [
+        "hs-fullscreen.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "hs-fullscreen.css"
+}

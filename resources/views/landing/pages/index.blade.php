@@ -19,7 +19,7 @@
             </div>
             <div class="col-md 12 col-lg-6">
               <div class="right-section">
-                <img src="/images/abstract-get-lost.png" alt="">
+                <img src="{{asset('landing/images/abstract-get-lost.png')}}" alt="">
                 <div class="resource">
                   <a href="https://icons8.com/illustrations/author/60872b904391d1000c87ab70">Marina Mogulskaya</a> from <a
                     href="https://icons8.com/illustrations">Ouch!</a>
@@ -44,7 +44,7 @@
                   <i class="fas fa-search-location fa-2x"></i>
                 </div>
                 <div class="card-body">
-                  <h5>Choose A Location</h3>
+                  <h5>Pilih Lokasi Anda</h5>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, aliquid.</p>
                 </div>
               </div>
@@ -55,8 +55,8 @@
                   <i class="fas fa-calendar-week fa-2x"></i>
                 </div>
                 <div class="card-body">
-                  <h5>Choose A Location</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, aliquid.</p>
+                  <h5>Tentukan Jadwal Anda</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@
                   <i class="fas fa-car fa-2x"></i>
                 </div>
                 <div class="card-body">
-                  <h5>Choose A Location</h3>
+                  <h5>Pilih Lokasi Anda</h5>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, aliquid.</p>
                 </div>
               </div>
@@ -77,8 +77,8 @@
                   <i class="fas fa-book-reader fa-2x"></i>
                 </div>
                 <div class="card-body">
-                  <h5>Choose A Location</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, aliquid.</p>
+                  <h5>Booking mobil pilihan anda</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@
           <div class="row">
             <div class="col-lg-6 col-md-12">
               <div class="left-section">
-                <img src="/images/bermuda-car-service-1.png" alt="">
+                <img src="{{asset("landing/images/bermuda-car-service-1.png")}}" alt="">
               </div>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -101,9 +101,10 @@
                 <h1>All the good service will be provide to you!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quam?</p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Harga sewa di Rent Here terjangkau.</li>
+                  <li>Driver yang berpengalaman</li>
+                  <li>Ada berbagai macam pilihan mobil</li>
+                  <li>Mobil-mobil yang terawat dan layak pakai</li>
                 </ul>
               </div>
             </div>

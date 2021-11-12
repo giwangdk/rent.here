@@ -3,10 +3,12 @@
 @section('content')
 <div class="sign-in-page">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex align-items-center">
         <div class="left-section col-md-12 col-lg-6">
           <div class="card">
-            logo
+            <a class="navbar-brand" href="./index.html" style="width:120px; margin-left:-12px;" aria-label="Front">
+              <img class="navbar-brand-logo w-100" src="{{asset('dashboard/assets/img/logo rent here (1).png')}}" alt="Logo">
+         </a>
             <h2>Login</h2>
             <span class="text-muted">Lorem ipsum dolor sit amet consectetur</span>
             <form method="POST" action="{{ route('login') }}">
@@ -33,14 +35,14 @@
                 </div>
                 <button type="submit" class="btn btn-login">Login</button>
               </form>
-              <a href="#" class="btn btn-register">Create an Account</a>
+              <a href="{{route('register')}}" class="btn btn-register">Create an Account</a>
           </div>
         
         
         </div>
         <div class="right-section col-md-12 col-lg-6">
-          <div class="card">
-            
+          <div class="">
+            <img src="{{asset('landing/images/Login ya.png')}}" class="w-100" alt="">
           </div>
         
         
