@@ -29,6 +29,7 @@ Route::prefix('admin')
         Route::resource('user', 'UserController');
         Route::resource('car', 'CarController');
         Route::resource('gallery', 'GalleryController');
+        Route::resource('detail', 'DetailController');
     });
 
 Auth::routes();

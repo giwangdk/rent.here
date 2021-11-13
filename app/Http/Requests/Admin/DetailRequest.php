@@ -13,7 +13,7 @@ class DetailRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class DetailRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'tahun_pembuatan' => 'required',
+            'warna_mobil' => 'required',
+            'kapasitas_penumpang' => 'required',
+            'deskripsi' => 'required',
+            'car_id' => 'required'
+
         ];
     }
 }
