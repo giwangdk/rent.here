@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Detail;
+use App\Price;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\Admin\DetailRequest;
+use App\Http\Requests\Admin\PriceRequest;
 use App\Car;
 
-class DetailController extends Controller
+class PriceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class DetailController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Detail::with(['Car']);
+            $query = Price::with(['Car']);
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
@@ -31,7 +31,7 @@ class DetailController extends Controller
                                 Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <form action="' . route('detail.destroy', $item->id) . '" method="post">
+                                    <form action="' . route('price.destroy', $item->id) . '" method="post">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                         Hapus
@@ -48,7 +48,7 @@ class DetailController extends Controller
                 ->rawColumns(['action'])
                 ->make();
         }
-        return view('admin.pages.detail.index');
+        return view('admin.pages.price.index');
     }
 
     /**
@@ -59,7 +59,7 @@ class DetailController extends Controller
     public function create()
     {
         $cars = Car::all();
-        return view('admin.pages.detail.create', compact('cars'));
+        return view('admin.pages.price.create', compact('cars'));
     }
 
     /**
@@ -68,12 +68,12 @@ class DetailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(DetailRequest $request)
+    public function store(PriceRequest $request)
     {
         $data['car_id'] = $request->car_id;
-        Detail::create($data);
+        Price::create($data);
 
-        return redirect()->route('detail.index');
+        return redirect()->route('price.index');
     }
 
     /**
@@ -91,9 +91,9 @@ class DetailController extends Controller
      */
     public function destroy($id)
     {
-        $item = Detail::findOrFail($id);
+        $item = Price::findOrFail($id);
         $item->delete();
 
-        return redirect()->route('detail.index');
+        return redirect()->route('price.index');
     }
 }
