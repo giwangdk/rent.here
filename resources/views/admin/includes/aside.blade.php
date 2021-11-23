@@ -61,6 +61,18 @@
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Galleries</span>
                         </a>
                     </li>
+                    <li class="navbar-vertical-aside-has-menu ">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route("detail.index")}}" title="Pages">
+                            <i class="tio-pages-outlined nav-icon"></i>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Detail</span>
+                        </a>
+                    </li>
+                    <li class="navbar-vertical-aside-has-menu ">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route("price.index")}}" title="Pages">
+                            <i class="tio-pages-outlined nav-icon"></i>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Price</span>
+                        </a>
+                    </li>
 
                     
             </div>

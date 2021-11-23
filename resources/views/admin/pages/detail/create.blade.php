@@ -31,10 +31,18 @@ Detail
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="">Mobil</label>
-                                            <input type="text" name="car" id="" class="form-control" value="{{old('car', '')}}" required>
-                                        </div>
+                                         
+                                <div class="form-group">
+                                    <label for="">Car</label>
+                                <div class="input-group">
+                                    <select name="car_id" class="custom-select">
+                                @foreach ($cars as $car)
+                                    <option value="{{$car->id}}">
+                                        {{$car->name}}</option>
+                                    @endforeach
+                                </select>
+                                </div>
+                                </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">

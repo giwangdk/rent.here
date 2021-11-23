@@ -120,50 +120,24 @@
               <h2>What we have?</h2>
             </div>
             <div class="card-group mt-5">
+              
+              @forelse ($categories as $category)
               <a class="col-lg-6 col-md-12 " href="#">
-              <div class="card">
-                <div class="card-top text-center ">
-                  <img src="./images/7513097232_7935b8bd99.jpg.crdownload" alt="" srcset="">
+                <div class="card">
+                  <div class="card-top text-center ">
+                    <img src="{{Storage::url($category->photo)}}" alt="" srcset="" class="w-100">
+                  </div>
+                  <div class="card-body">
+                    <h5>{{$category->name}}</h3>
+                    <p>{!!$category->description!!}</p>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <h5>Sport Utility Vehicle (SUV)</h3>
-                  <p>adalah kendaraan penumpang yang memiliki kemampuan untuk mengangkut penumpang sekaligus barang dengan lincah..</p>
-                </div>
-              </div>
-            </a>
-             <a class="col-lg-6 col-md-12 " href="#">
-              <div class="card">
-                <div class="card-top text-center ">
-                  <img src="./images/7513097232_7935b8bd99.jpg.crdownload" alt="" srcset="">
-                </div>
-                <div class="card-body">
-                  <h5>Sport Utility Vehicle (SUV)</h3>
-                  <p>adalah kendaraan penumpang yang memiliki kemampuan untuk mengangkut penumpang sekaligus barang dengan lincah..</p>
-                </div>
-              </div>
-            </a>
-            <a class="col-lg-6 col-md-12 " href="#">
-              <div class="card">
-                <div class="card-top text-center ">
-                  <img src="./images/7513097232_7935b8bd99.jpg.crdownload" alt="" srcset="">
-                </div>
-                <div class="card-body">
-                  <h5>Sport Utility Vehicle (SUV)</h3>
-                  <p>adalah kendaraan penumpang yang memiliki kemampuan untuk mengangkut penumpang sekaligus barang dengan lincah..</p>
-                </div>
-              </div>
-            </a>
-            <a class="col-lg-6 col-md-12 " href="#">
-              <div class="card">
-                <div class="card-top text-center ">
-                  <img src="./images/7513097232_7935b8bd99.jpg.crdownload" alt="" srcset="">
-                </div>
-                <div class="card-body">
-                  <h5>Sport Utility Vehicle (SUV)</h3>
-                  <p>adalah kendaraan penumpang yang memiliki kemampuan untuk mengangkut penumpang sekaligus barang dengan lincah..</p>
-                </div>
-              </div>
-            </a>
+              </a>
+              @empty
+                  
+              @endforelse
+
+              
             
             </div>
           </div>

@@ -18,6 +18,9 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('about', function () {
     return view('landing.pages.about');
 })->name('about');
+Route::get('detail', function () {
+    return view('landing.pages.detail');
+})->name('detail');
 
 
 Route::prefix('admin')
@@ -30,6 +33,7 @@ Route::prefix('admin')
         Route::resource('car', 'CarController');
         Route::resource('gallery', 'GalleryController');
         Route::resource('detail', 'DetailController');
+        Route::resource('price', 'PriceController');
     });
 
 Auth::routes();
