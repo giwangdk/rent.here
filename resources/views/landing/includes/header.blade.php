@@ -14,7 +14,7 @@
             <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item ml-4">
-            <a class="nav-link" href="#">Layanan</a>
+            <a class="nav-link" href="{{route('layanan')}}">Layanan</a>
           </li>
           <li class="nav-item ml-4">
             <a class="nav-link" href="{{route('about')}}">About us</a>

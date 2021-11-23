@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/layanan', 'CategoryController@index')->name('layanan');
 Route::get('about', function () {
     return view('landing.pages.about');
 })->name('about');
