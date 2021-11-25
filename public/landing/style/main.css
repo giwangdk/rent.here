@@ -11130,7 +11130,7 @@ main .sign-up-page .left-section .card .btn-login {
 }
 
 .about-page {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .about-page .about-section .right-section .card {
@@ -11195,5 +11195,78 @@ main .sign-up-page .left-section .card .btn-login {
 
 .layanan-page .list-cars .card-group .card .card-body h5 {
   text-decoration: none;
+}
+
+.detail-page {
+  margin-top: 120px;
+}
+
+.detail-page .detail-section .right-section .card {
+  border: none;
+  background-color: #e4f3f7;
+  padding: 30px;
+  line-height: 24px;
+}
+
+.detail-page .detail-section .right-section .card h2 {
+  font-weight: 600;
+}
+
+.detail-page .price-section {
+  margin-top: 40px;
+}
+
+.detail-page .price-section h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.detail-page .price-section .btn-book {
+  background-color: #A2DBFA;
+  color: white;
+}
+
+main .book-page {
+  margin-top: 50px;
+}
+
+main .book-page .left-section .card {
+  border: 0;
+  padding: 25px;
+  border-radius: 10px;
+  color: #054553;
+}
+
+main .book-page .left-section .card h2 {
+  font-weight: 700;
+}
+
+main .book-page .left-section .card form {
+  margin-top: 35px;
+}
+
+main .book-page .left-section .card form label {
+  font-weight: 500;
+}
+
+main .book-page .left-section .card form input {
+  border: 0;
+  background-color: #effaff;
+}
+
+main .book-page .left-section .card form button {
+  background-color: #2086bd;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+}
+
+main .book-page .left-section .card .btn-book {
+  background-color: #A2DBFA;
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,9 +20,7 @@ Route::get('/layanan', 'CategoryController@index')->name('layanan');
 Route::get('about', function () {
     return view('landing.pages.about');
 })->name('about');
-Route::get('detail', function () {
-    return view('landing.pages.detail');
-})->name('detail');
+Route::get('detail/{id}', 'CarController@index')->name('detail');
 
 
 Route::prefix('admin')

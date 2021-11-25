@@ -1,0 +1,50 @@
+@import './../variables';
+
+
+main {
+
+    .book-page {
+        margin-top: 50px;
+
+        .left-section {
+            .card {
+                border: 0;
+                padding: 25px;
+                border-radius: 10px;
+                color: $darkBlue;
+
+                h2 {
+                    font-weight: 700;
+                }
+
+                form {
+                    margin-top: 35px;
+
+                    label {
+                        font-weight: 500;
+                    }
+
+                    input {
+                        border: 0;
+                        background-color: $light;
+                    }
+
+                    button {
+                        background-color: $medBlue;
+                        width: 100%;
+                        color: white;
+                        font-weight: 500;
+                    }
+                }
+
+                .btn-book {
+                    background-color: $lightBlue;
+                    width: 100%;
+                    margin-top: 10px;
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
