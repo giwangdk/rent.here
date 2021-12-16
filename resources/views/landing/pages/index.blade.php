@@ -123,13 +123,13 @@
               
               @forelse ($categories as $category)
               <a class="col-lg-6 col-md-12 " href="#">
-                <div class="card">
+                <div class="card" style="max-height:350px; overflow:hidden">
                   <div class="card-top text-center ">
-                    <img src="{{Storage::url($category->photo)}}" alt="" srcset="" class="w-100">
+                    <img style="max-width:280px" src="{{Storage::url($category->photo)}}" alt="" srcset="" class="w-100">
                   </div>
-                  <div class="card-body">
+                  <div class="card-body mt-1">
                     <h5>{{$category->name}}</h3>
-                    <p>{!!$category->description!!}</p>
+                    <p style="font-size: 12px">{!!$category->description!!}</p>
                   </div>
                 </div>
               </a>

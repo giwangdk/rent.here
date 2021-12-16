@@ -21,6 +21,8 @@ Route::get('about', function () {
     return view('landing.pages.about');
 })->name('about');
 Route::get('detail/{id}', 'CarController@index')->name('detail');
+Route::get('book/{id}', 'BookController@index')->name('book');
+Route::post('confirm', 'BookController@book')->name('confirm');
 
 
 Route::prefix('admin')
