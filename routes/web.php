@@ -36,6 +36,7 @@ Route::prefix('admin')
         Route::resource('gallery', 'GalleryController');
         Route::resource('detail', 'DetailController');
         Route::resource('price', 'PriceController');
+        Route::get('transaction', 'TransactionController@index')->name('transaction');
     });
 
 Auth::routes();

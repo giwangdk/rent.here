@@ -73,6 +73,12 @@
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Price</span>
                         </a>
                     </li>
+                    <li class="navbar-vertical-aside-has-menu ">
+                        <a class="js-nav-tooltip-link nav-link" href="{{route("transaction")}}" title="Pages">
+                            <i class="tio-pages-outlined nav-icon"></i>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Transactions</span>
+                        </a>
+                    </li>
 
                     
             </div>
