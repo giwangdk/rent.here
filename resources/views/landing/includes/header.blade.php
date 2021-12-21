@@ -21,12 +21,31 @@
           </li>
         </ul>
         <ul class="navbar-nav ml-auto d-flex justify-content-around">
+          @guest
           <li class="nav-item mr-3">
             <a class="nav-link btn-login" href="{{route('login')}}">Sign In</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn-register" href="{{route('register')}}">Sign Up</a>
           </li>
+          @endguest
+          @auth
+
+        @if  (Auth::user() && Auth::user()->roles == 'ADMIN')
+        <li class="nav-item">
+            <a class="btn btn-register" href="/admin">Dashboard </a>
+            </li>
+        @endif
+
+            <li class="nav-item">
+            <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="btn btn-login ml-2">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+            </li>
+          @endauth
         </ul>
       </div>
     </div>
