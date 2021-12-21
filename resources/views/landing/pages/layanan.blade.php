@@ -21,7 +21,7 @@
       <div class="row">
         <div class="card-group mt-5">
             @forelse ($categories as $category)
-            <a class="col-lg-6 col-md-12 " href="#">
+            <a class="col-lg-6 col-md-12 " href="{{route('detail', $category->slug)}}">
               <div class="card" style="max-height:320px; overflow:hidden">
                 <div class="card-top text-center ">
                   <img style="max-width:280px" src="{{Storage::url($category->photo)}}" alt="" srcset="" class="w-100">

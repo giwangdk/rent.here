@@ -72,7 +72,7 @@
         <th >{{number_format($item->price)}}</th>
         <th>{{number_format(200000)}}</th>
         <th class="badge badge-success p-2 mt-3 " style="font-size: 10px">{{$car->status}}</th>
-        <th><a href="#" class="btn btn-book">Book</a></th>
+        <th><a href="{{route('book', $item->id)}}" class="btn btn-book">Book</a></th>
         @endforeach
       </tr>
   @empty
