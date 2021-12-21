@@ -18,7 +18,7 @@
         <div class="left-section col-12">
           <div class="card">
             @auth
-              <form action="/confirm" method="POST">
+              <form action="{{route("confirmBook", $car->id)}}" method="POST">
                 @csrf
                 <div class="row">
                 <div class="col-lg-6 col-sm-12">
@@ -48,17 +48,11 @@
                 <div class="row">
                   
                 <div class="col-lg-6 col-sm-12">
-                    <div class="form-group">
-                        <label for="">Mobil</label>
-                    <div class="input-group">
-                        <select name="car" class="custom-select">
-                    @foreach ($cars as $car)
-                        <option value="{{$car->id}}">
-                            {{$car->name}}</option>
-                        @endforeach
-                    </select>
-                    </div>
-                    </div>
+                  <div class="form-group">
+                    <label for="car">Mobil</label>
+                    <input type="car" class="form-control" id="car"
+                      name="car" cols="20" rows="10" value="{{$car->name}}">
+                  </div>
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <div class="form-group">
@@ -76,8 +70,11 @@
                 </div>
                 <div class="form-group d-none">
                   <label for="total">Total</label>
+                  @foreach ($car->prices as $item)
                   <input type="text" class="form-control" id="total"
-                    name="total" value="200000">
+                  name="total" value="{{$item->price}}">
+                  @endforeach
+                  
                 </div>
                 <button class="btn btn-book">Booking Mobil</button>
               </form>

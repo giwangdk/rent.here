@@ -60,7 +60,7 @@
                 {data: 'name', name: 'name'},
                 {data: 'phone_num', name: 'No telp'},
                 {data: 'address', name: 'address'},
-                {data: 'car.name', name: 'car'},
+                {data: 'car', name: 'car'},
                 {data: 'with_driver', name: 'with driver'},
                 {data: 'total', name: 'total'}
             ],

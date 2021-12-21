@@ -22,7 +22,8 @@ Route::get('about', function () {
 })->name('about');
 Route::get('detail/{id}', 'CarController@index')->name('detail');
 Route::get('book/{id}', 'BookController@index')->name('book');
-Route::post('confirm', 'BookController@book')->name('confirm');
+Route::post('confirm/{id}', 'BookController@book')->name('confirm');
+Route::get('confirm/{id}', 'BookController@show')->name('confirmBook');
 
 
 Route::prefix('admin')
